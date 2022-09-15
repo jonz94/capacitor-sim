@@ -22,7 +22,7 @@ npx cap sync
 ### Variables
 
 This plugin will use the following project variables (defined in your app's `variables.gradle` file):
-- `$kotlinVersion` version of `org.jetbrains.kotlin:kotlin-stdlib-jdk7:` (default: `1.7.10`)
+- `$kotlinVersion` version of `org.jetbrains.kotlin:kotlin-stdlib-jdk7` (default: `1.7.10`)
 - `$coreKtx` version of `androidx.core:core-ktx` (default: `1.8.0`)
 
 ## Configuration
