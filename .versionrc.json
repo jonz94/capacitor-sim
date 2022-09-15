@@ -1,0 +1,7 @@
+{
+  "header": "# Changelog\n\nAll notable changes to this project will be documented in this file.\n",
+  "releaseCommitMessageFormat": "release: v{{currentTag}}",
+  "scripts": {
+    "postchangelog": "prettier --write CHANGELOG.md"
+  }
+}
