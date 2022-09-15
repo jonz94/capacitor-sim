@@ -1,13 +1,33 @@
-# @jonz94/capacitor-sim
+<p align="center"><br><img src="https://user-images.githubusercontent.com/236501/85893648-1c92e880-b7a8-11ea-926d-95355b8175c7.png" width="128" height="128" /></p>
+<h3 align="center">Sim</h3>
+<p align="center"><strong><code>@jonz94/capacitor-sim</code></strong></p>
+<p align="center">
+  Capacitor plugin to get information from device's sim cards
+</p>
 
-Capacitor plugin to get information from device's sim cards
+<p align="center">
+  <a href="https://www.npmjs.com/package/@jonz94/capacitor-sim"><img src="https://img.shields.io/npm/l/@jonz94/capacitor-sim?style=flat-square" /></a>
+  <a href="https://www.npmjs.com/package/@jonz94/capacitor-sim"><img src="https://img.shields.io/npm/v/@jonz94/capacitor-sim?style=flat-square" /></a>
+</p>
 
 ## Install
 
-```bash
+```shell
 npm install @jonz94/capacitor-sim
 npx cap sync
 ```
+
+## Android
+
+### Variables
+
+This plugin will use the following project variables (defined in your app's `variables.gradle` file):
+- `$kotlinVersion` version of `org.jetbrains.kotlin:kotlin-stdlib-jdk7:` (default: `1.7.10`)
+- `$coreKtx` version of `androidx.core:core-ktx` (default: `1.8.0`)
+
+## Configuration
+
+No configuration required for this plugin.
 
 ## API
 
@@ -30,7 +50,11 @@ npx cap sync
 getSimCards() => Promise<GetSimCardsResult>
 ```
 
+Get information from device's sim cards.
+
 **Returns:** <code>Promise&lt;<a href="#getsimcardsresult">GetSimCardsResult</a>&gt;</code>
+
+**Since:** 1.0.0
 
 --------------------
 
@@ -41,7 +65,13 @@ getSimCards() => Promise<GetSimCardsResult>
 checkPermissions() => Promise<PermissionStatus>
 ```
 
+Check permission to get information from device's sim cards.
+
+On iOS the status is always granted.
+
 **Returns:** <code>Promise&lt;<a href="#permissionstatus">PermissionStatus</a>&gt;</code>
+
+**Since:** 1.0.0
 
 --------------------
 
@@ -52,7 +82,13 @@ checkPermissions() => Promise<PermissionStatus>
 requestPermissions() => Promise<PermissionStatus>
 ```
 
+Request permission to get information from device's sim cards.
+
+On iOS the status is always granted.
+
 **Returns:** <code>Promise&lt;<a href="#permissionstatus">PermissionStatus</a>&gt;</code>
+
+**Since:** 1.0.0
 
 --------------------
 
@@ -69,14 +105,14 @@ requestPermissions() => Promise<PermissionStatus>
 
 #### SimCard
 
-| Prop                    | Type                 |
-| ----------------------- | -------------------- |
-| **`number`**            | <code>string</code>  |
-| **`allowsVOIP`**        | <code>boolean</code> |
-| **`carrierName`**       | <code>string</code>  |
-| **`isoCountryCode`**    | <code>string</code>  |
-| **`mobileCountryCode`** | <code>string</code>  |
-| **`mobileNetworkCode`** | <code>string</code>  |
+| Prop                    | Type                 | Description                                                                                      | Since |
+| ----------------------- | -------------------- | ------------------------------------------------------------------------------------------------ | ----- |
+| **`number`**            | <code>string</code>  | Android only: Phone number                                                                       | 1.0.0 |
+| **`allowsVOIP`**        | <code>boolean</code> | iOS only: If this carrier allows VOIP calls to be made on its network                            | 1.0.0 |
+| **`carrierName`**       | <code>string</code>  | The name of the cellular service provider                                                        | 1.0.0 |
+| **`isoCountryCode`**    | <code>string</code>  | Country code for the cellular service provider, represented as an ISO 3166-1 country code string | 1.0.0 |
+| **`mobileCountryCode`** | <code>string</code>  | Mobile country code (MCC) for the cellular service provider, in its numeric representation       | 1.0.0 |
+| **`mobileNetworkCode`** | <code>string</code>  | Mobile network code (MNC) for the cellular service provider, in its numeric representation       | 1.0.0 |
 
 
 #### PermissionStatus
