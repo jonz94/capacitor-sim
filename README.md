@@ -2,7 +2,7 @@
 <h3 align="center">Sim</h3>
 <p align="center"><strong><code>@jonz94/capacitor-sim</code></strong></p>
 <p align="center">
-  Capacitor plugin to get information from device's sim cards
+  Capacitor plugin to get information from device's sim cards.
 </p>
 
 <p align="center">
@@ -105,14 +105,14 @@ On iOS the status is always granted.
 
 #### SimCard
 
-| Prop                    | Type                 | Description                                                                                      | Since |
-| ----------------------- | -------------------- | ------------------------------------------------------------------------------------------------ | ----- |
-| **`number`**            | <code>string</code>  | Android only: Phone number                                                                       | 1.0.0 |
-| **`allowsVOIP`**        | <code>boolean</code> | iOS only: If this carrier allows VOIP calls to be made on its network                            | 1.0.0 |
-| **`carrierName`**       | <code>string</code>  | The name of the cellular service provider                                                        | 1.0.0 |
-| **`isoCountryCode`**    | <code>string</code>  | Country code for the cellular service provider, represented as an ISO 3166-1 country code string | 1.0.0 |
-| **`mobileCountryCode`** | <code>string</code>  | Mobile country code (MCC) for the cellular service provider, in its numeric representation       | 1.0.0 |
-| **`mobileNetworkCode`** | <code>string</code>  | Mobile network code (MNC) for the cellular service provider, in its numeric representation       | 1.0.0 |
+| Prop                    | Type                 | Description                                                                                       | Since |
+| ----------------------- | -------------------- | ------------------------------------------------------------------------------------------------- | ----- |
+| **`number`**            | <code>string</code>  | Android only: Phone number.                                                                       | 1.0.0 |
+| **`allowsVOIP`**        | <code>boolean</code> | iOS only: If this carrier allows VOIP calls to be made on its network.                            | 1.0.0 |
+| **`carrierName`**       | <code>string</code>  | The name of the cellular service provider.                                                        | 1.0.0 |
+| **`isoCountryCode`**    | <code>string</code>  | Country code for the cellular service provider, represented as an ISO 3166-1 country code string. | 1.0.0 |
+| **`mobileCountryCode`** | <code>string</code>  | Mobile country code (MCC) for the cellular service provider, in its numeric representation.       | 1.0.0 |
+| **`mobileNetworkCode`** | <code>string</code>  | Mobile network code (MNC) for the cellular service provider, in its numeric representation.       | 1.0.0 |
 
 
 #### PermissionStatus

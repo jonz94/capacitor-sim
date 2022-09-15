@@ -37,21 +37,21 @@ export interface GetSimCardsResult {
 
 export interface SimCard {
   /**
-   * Android only: Phone number
+   * Android only: Phone number.
    *
    * @since 1.0.0
    */
   number?: string;
 
   /**
-   * iOS only: If this carrier allows VOIP calls to be made on its network
+   * iOS only: If this carrier allows VOIP calls to be made on its network.
    *
    * @since 1.0.0
    */
   allowsVOIP?: boolean;
 
   /**
-   * The name of the cellular service provider
+   * The name of the cellular service provider.
    *
    * @since 1.0.0
    */
@@ -59,7 +59,7 @@ export interface SimCard {
 
   /**
    * Country code for the cellular service provider,
-   * represented as an ISO 3166-1 country code string
+   * represented as an ISO 3166-1 country code string.
    *
    * @since 1.0.0
    */
@@ -67,7 +67,7 @@ export interface SimCard {
 
   /**
    * Mobile country code (MCC) for the cellular service provider,
-   * in its numeric representation
+   * in its numeric representation.
    *
    * @since 1.0.0
    */
@@ -75,7 +75,7 @@ export interface SimCard {
 
   /**
    * Mobile network code (MNC) for the cellular service provider,
-   * in its numeric representation
+   * in its numeric representation.
    *
    * @since 1.0.0
    */
