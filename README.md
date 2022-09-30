@@ -130,3 +130,11 @@ On iOS the status is always granted.
 <code>'prompt' | 'prompt-with-rationale' | 'granted' | 'denied'</code>
 
 </docgen-api>
+
+## Changelog
+
+See [CHANGELOG.md](https://github.com/jonz94/capacitor-sim/blob/main/CHANGELOG.md).
+
+## License
+
+See [LICENSE](https://github.com/jonz94/capacitor-sim/blob/main/LICENSE).
