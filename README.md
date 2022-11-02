@@ -6,6 +6,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/jonz94/capacitor-sim/actions/workflows/ci.yml"><img src="https://img.shields.io/github/workflow/status/jonz94/capacitor-sim/CI/main?logo=github&style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/@jonz94/capacitor-sim"><img src="https://img.shields.io/npm/l/@jonz94/capacitor-sim?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/@jonz94/capacitor-sim"><img src="https://img.shields.io/npm/v/@jonz94/capacitor-sim?style=flat-square" /></a>
 </p>
