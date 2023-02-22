@@ -16,6 +16,10 @@
     "url": "git+https://github.com/jonz94/capacitor-sim.git"
   },
   "license": "0BSD",
+  "author": {
+    "name": "jonz94",
+    "email": "jody16888@gmail.com"
+  },
   "main": "dist/plugin.cjs.js",
   "unpkg": "dist/plugin.js",
   "module": "dist/esm/index.js",
