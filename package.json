@@ -1,6 +1,6 @@
 {
   "name": "@jonz94/capacitor-sim",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Capacitor plugin to get information from device's sim cards",
   "keywords": [
     "capacitor",
