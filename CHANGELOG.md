@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
-- add missing required attribute `authors` ([#2](https://github.com/jonz94/capacitor-sim/issues/2)) ([70538b7](https://github.com/jonz94/capacitor-sim/commit/70538b7ad17695184f96ef72b2f7fbd6f3e70643))
+- add missing required attribute `authors` ([#2](https://github.com/jonz94/capacitor-sim/issues/2)) ([70538b7](https://github.com/jonz94/capacitor-sim/commit/70538b7ad17695184f96ef72b2f7fbd6f3e70643)), closes [#1](https://github.com/jonz94/capacitor-sim/issues/1)
 
 ## [1.0.2](https://github.com/jonz94/capacitor-sim/compare/v1.0.1...v1.0.2) (2022-11-11)
 
