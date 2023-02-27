@@ -8,13 +8,13 @@ public class SimPlugin: CAPPlugin {
         if let carrierCollection = CTTelephonyNetworkInfo().serviceSubscriberCellularProviders {
             var carrierInfoCollection: [[String: Any]] = []
             for (_, carrier) in carrierCollection {
-                var carrierInfo: [String: Any] = [:]
-                carrierInfo["allowsVOIP"] = carrier.allowsVOIP
-                carrierInfo["carrierName"] = carrier.carrierName
-                carrierInfo["isoCountryCode"] = carrier.isoCountryCode
-                carrierInfo["mobileCountryCode"] = carrier.mobileCountryCode
-                carrierInfo["mobileNetworkCode"] = carrier.mobileNetworkCode
-                carrierInfoCollection.append(carrierInfo)
+                carrierInfoCollection.append([
+                    "allowsVOIP": carrier.allowsVOIP,
+                    "carrierName": carrier.carrierName ?? "",
+                    "isoCountryCode": carrier.isoCountryCode ?? "",
+                    "mobileCountryCode": carrier.mobileCountryCode ?? "",
+                    "mobileNetworkCode": carrier.mobileNetworkCode ?? ""
+                ])
             }
             call.resolve([
                 "simCards": carrierInfoCollection
