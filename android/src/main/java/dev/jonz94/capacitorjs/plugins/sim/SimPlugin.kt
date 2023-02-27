@@ -3,6 +3,7 @@ package dev.jonz94.capacitorjs.plugins.sim
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
+import android.os.Build
 import android.telephony.SubscriptionManager
 import com.getcapacitor.*
 import com.getcapacitor.annotation.CapacitorPlugin
@@ -45,8 +46,15 @@ class SimPlugin : Plugin() {
                 carrierInfo.put("number", subscriptionInfo.number)
                 carrierInfo.put("carrierName", subscriptionInfo.carrierName)
                 carrierInfo.put("isoCountryCode", subscriptionInfo.countryIso)
-                carrierInfo.put("mobileCountryCode", subscriptionInfo.mccString)
-                carrierInfo.put("mobileNetworkCode", subscriptionInfo.mncString)
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                    carrierInfo.put("mobileCountryCode", subscriptionInfo.mccString)
+                    carrierInfo.put("mobileNetworkCode", subscriptionInfo.mncString)
+                } else {
+                    carrierInfo.put("mobileCountryCode", subscriptionInfo.mcc.toString())
+                    carrierInfo.put("mobileNetworkCode", subscriptionInfo.mnc.toString())
+                }
+
                 carrierInfoCollection.put(carrierInfo)
             }
         }
