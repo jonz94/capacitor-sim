@@ -53,10 +53,10 @@
     "extends": "@ionic/eslint-config/recommended"
   },
   "devDependencies": {
-    "@capacitor/android": "^4.6.3",
-    "@capacitor/core": "^4.6.3",
+    "@capacitor/android": "^4.7.0",
+    "@capacitor/core": "^4.7.0",
     "@capacitor/docgen": "^0.2.1",
-    "@capacitor/ios": "^4.6.3",
+    "@capacitor/ios": "^4.7.0",
     "@ionic/eslint-config": "^0.3.0",
     "@ionic/prettier-config": "^2.0.0",
     "@ionic/swiftlint-config": "^1.1.2",
