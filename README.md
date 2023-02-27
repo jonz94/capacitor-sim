@@ -30,6 +30,24 @@ This plugin will use the following project variables (defined in your app's `var
 
 No configuration required for this plugin.
 
+## Demo
+
+A working example can be found here: [jonz94/capacitor-sim-demo](https://github.com/jonz94/capacitor-sim-demo)
+
+## Usage
+
+```typescript
+import { Sim } from '@jonz94/capacitor-sim';
+
+const getSimCards = async () => {
+  const { simCards } = await Sim.getSimCards();
+
+  // console.log(simCards);
+
+  return simCards;
+}
+```
+
 ## API
 
 <docgen-index>
