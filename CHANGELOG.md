@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.4](https://github.com/jonz94/capacitor-sim/compare/v1.0.3...v1.0.4) (2023-02-27)
+
+### Bug Fixes
+
+- **android:** resolve crash issue on Android < 10 ([4858507](https://github.com/jonz94/capacitor-sim/commit/4858507abc62e41796a05b2724f5837438e890c9))
+
 ## [1.0.3](https://github.com/jonz94/capacitor-sim/compare/v1.0.2...v1.0.3) (2023-02-22)
 
 ### Bug Fixes
