@@ -43,7 +43,14 @@ class SimPlugin : Plugin() {
         if (subscriptionInfoList != null) {
             for (subscriptionInfo in subscriptionInfoList) {
                 val carrierInfo = JSObject()
-                carrierInfo.put("number", subscriptionInfo.number)
+
+                @SuppressLint("MissingPermission")
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                    carrierInfo.put("number", subscriptionManager.getPhoneNumber(subscriptionInfo.subscriptionId))
+                } else {
+                    carrierInfo.put("number", subscriptionInfo.number)
+                }
+
                 carrierInfo.put("carrierName", subscriptionInfo.carrierName)
                 carrierInfo.put("isoCountryCode", subscriptionInfo.countryIso)
 
