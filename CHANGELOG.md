@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.5](https://github.com/jonz94/capacitor-sim/compare/v1.0.4...v1.0.5) (2023-04-16)
+
+### Bug Fixes
+
+- **android:** fix phone number is empty string on android 11 and above ([#6](https://github.com/jonz94/capacitor-sim/issues/6)) ([0f9a853](https://github.com/jonz94/capacitor-sim/commit/0f9a85305c3395ecdec5c98546cc294668eb9c5b)), closes [#3](https://github.com/jonz94/capacitor-sim/issues/3)
+
 ## [1.0.4](https://github.com/jonz94/capacitor-sim/compare/v1.0.3...v1.0.4) (2023-02-27)
 
 ### Bug Fixes
