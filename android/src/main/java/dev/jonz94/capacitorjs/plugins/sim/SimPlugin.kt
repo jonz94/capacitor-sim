@@ -20,7 +20,7 @@ import com.getcapacitor.annotation.PermissionCallback
             ],
             alias = SimPlugin.READ_PHONE_STATE,
         ),
-        // SDK VERSIONS 33 AND ABOVE
+        // `READ_PHONE_NUMBERS` permission is required for api level >= 30
         Permission(
             strings = [
                 Manifest.permission.READ_PHONE_NUMBERS,
@@ -39,7 +39,7 @@ class SimPlugin : Plugin() {
     @PluginMethod
     fun getSimCards(call: PluginCall) {
         if (!isPermissionGranted()) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                 requestPermissionForAliases(arrayOf(READ_PHONE_NUMBERS, READ_PHONE_STATE), call, "permissionCallback")
             } else {
                 requestPermissionForAlias(READ_PHONE_STATE, call, "permissionCallback")
@@ -49,6 +49,7 @@ class SimPlugin : Plugin() {
 
         val subscriptionManager = context.getSystemService(Context.TELEPHONY_SUBSCRIPTION_SERVICE) as SubscriptionManager
 
+        // require `READ_PHONE_STATE` permission
         @SuppressLint("MissingPermission")
         val subscriptionInfoList = subscriptionManager.activeSubscriptionInfoList
 
@@ -59,6 +60,7 @@ class SimPlugin : Plugin() {
 
                 @SuppressLint("MissingPermission")
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                    // require `READ_PHONE_NUMBERS` permission
                     carrierInfo.put("number", subscriptionManager.getPhoneNumber(subscriptionInfo.subscriptionId))
                 } else {
                     carrierInfo.put("number", subscriptionInfo.number)
@@ -99,7 +101,10 @@ class SimPlugin : Plugin() {
     }
 
     private fun isPermissionGranted(): Boolean {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+        // for api level >= 30 (android >= 11), `READ_PHONE_NUMBERS` permission is required.
+        // if `READ_PHONE_NUMBERS` permission is not present, the return phone number will be empty string in some cases.
+        // see: https://developer.android.com/reference/android/telephony/SubscriptionInfo#getNumber()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {e
             return getPermissionState(READ_PHONE_NUMBERS) == PermissionState.GRANTED && getPermissionState(READ_PHONE_STATE) == PermissionState.GRANTED;
         }
 
