@@ -104,7 +104,7 @@ class SimPlugin : Plugin() {
         // for api level >= 30 (android >= 11), `READ_PHONE_NUMBERS` permission is required.
         // if `READ_PHONE_NUMBERS` permission is not present, the return phone number will be empty string in some cases.
         // see: https://developer.android.com/reference/android/telephony/SubscriptionInfo#getNumber()
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {e
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             return getPermissionState(READ_PHONE_NUMBERS) == PermissionState.GRANTED && getPermissionState(READ_PHONE_STATE) == PermissionState.GRANTED;
         }
 
