@@ -10,6 +10,7 @@ import com.getcapacitor.annotation.CapacitorPlugin
 import com.getcapacitor.annotation.Permission
 import com.getcapacitor.annotation.PermissionCallback
 
+@SuppressLint("InlinedApi")
 @CapacitorPlugin(
     name = "Sim",
     permissions = [
@@ -19,18 +20,30 @@ import com.getcapacitor.annotation.PermissionCallback
             ],
             alias = SimPlugin.READ_PHONE_STATE,
         ),
+        // `READ_PHONE_NUMBERS` permission is required for api level >= 30
+        Permission(
+            strings = [
+                Manifest.permission.READ_PHONE_NUMBERS,
+            ],
+            alias = SimPlugin.READ_PHONE_NUMBERS,
+        ),
     ]
 )
 class SimPlugin : Plugin() {
     companion object {
-        const val READ_PHONE_STATE = "readSimCard"
+        const val READ_PHONE_STATE = "readPhoneState"
+        const val READ_PHONE_NUMBERS = "readPhoneNumbers"
         private const val PERMISSION_DENIED_ERROR = "Unable to get information from sim cards, user denied permission request"
     }
 
     @PluginMethod
     fun getSimCards(call: PluginCall) {
         if (!isPermissionGranted()) {
-            requestAllPermissions(call, "permissionCallback");
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                requestPermissionForAliases(arrayOf(READ_PHONE_NUMBERS, READ_PHONE_STATE), call, "permissionCallback")
+            } else {
+                requestPermissionForAlias(READ_PHONE_STATE, call, "permissionCallback")
+            }
             return
         }
 
@@ -79,6 +92,13 @@ class SimPlugin : Plugin() {
     }
 
     private fun isPermissionGranted(): Boolean {
+        // for api level >= 30 (android >= 11), `READ_PHONE_NUMBERS` permission is required.
+        // if `READ_PHONE_NUMBERS` permission is not present, the return phone number will be empty string in some cases.
+        // see: https://developer.android.com/reference/android/telephony/SubscriptionInfo#getNumber()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            return getPermissionState(READ_PHONE_NUMBERS) == PermissionState.GRANTED && getPermissionState(READ_PHONE_STATE) == PermissionState.GRANTED;
+        }
+
         return getPermissionState(READ_PHONE_STATE) == PermissionState.GRANTED;
     }
 }
