@@ -10,27 +10,41 @@ import com.getcapacitor.annotation.CapacitorPlugin
 import com.getcapacitor.annotation.Permission
 import com.getcapacitor.annotation.PermissionCallback
 
+@SuppressLint("InlinedApi")
 @CapacitorPlugin(
     name = "Sim",
     permissions = [
+        // SDK VERSIONS 32 AND BELOW
         Permission(
             strings = [
                 Manifest.permission.READ_PHONE_STATE,
             ],
             alias = SimPlugin.READ_PHONE_STATE,
         ),
+        // SDK VERSIONS 33 AND ABOVE
+        Permission(
+            strings = [
+                Manifest.permission.READ_PHONE_NUMBERS,
+            ],
+            alias = SimPlugin.READ_PHONE_NUMBERS,
+        ),
     ]
 )
 class SimPlugin : Plugin() {
     companion object {
-        const val READ_PHONE_STATE = "readSimCard"
+        const val READ_PHONE_STATE = "readPhoneState"
+        const val READ_PHONE_NUMBERS = "readPhoneNumbers"
         private const val PERMISSION_DENIED_ERROR = "Unable to get information from sim cards, user denied permission request"
     }
 
     @PluginMethod
     fun getSimCards(call: PluginCall) {
         if (!isPermissionGranted()) {
-            requestAllPermissions(call, "permissionCallback");
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                requestPermissionForAlias(READ_PHONE_NUMBERS, call, "permissionCallback")
+            } else {
+                requestPermissionForAlias(READ_PHONE_STATE, call, "permissionCallback")
+            }
             return
         }
 
@@ -86,6 +100,10 @@ class SimPlugin : Plugin() {
     }
 
     private fun isPermissionGranted(): Boolean {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            return getPermissionState(READ_PHONE_NUMBERS) == PermissionState.GRANTED;
+        }
+
         return getPermissionState(READ_PHONE_STATE) == PermissionState.GRANTED;
     }
 }
