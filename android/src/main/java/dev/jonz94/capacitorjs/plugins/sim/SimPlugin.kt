@@ -14,7 +14,6 @@ import com.getcapacitor.annotation.PermissionCallback
 @CapacitorPlugin(
     name = "Sim",
     permissions = [
-        // SDK VERSIONS 32 AND BELOW
         Permission(
             strings = [
                 Manifest.permission.READ_PHONE_STATE,
@@ -41,7 +40,7 @@ class SimPlugin : Plugin() {
     fun getSimCards(call: PluginCall) {
         if (!isPermissionGranted()) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                requestPermissionForAlias(READ_PHONE_NUMBERS, call, "permissionCallback")
+                requestPermissionForAliases(arrayOf(READ_PHONE_NUMBERS, READ_PHONE_STATE), call, "permissionCallback")
             } else {
                 requestPermissionForAlias(READ_PHONE_STATE, call, "permissionCallback")
             }
@@ -101,7 +100,7 @@ class SimPlugin : Plugin() {
 
     private fun isPermissionGranted(): Boolean {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            return getPermissionState(READ_PHONE_NUMBERS) == PermissionState.GRANTED;
+            return getPermissionState(READ_PHONE_NUMBERS) == PermissionState.GRANTED && getPermissionState(READ_PHONE_STATE) == PermissionState.GRANTED;
         }
 
         return getPermissionState(READ_PHONE_STATE) == PermissionState.GRANTED;
