@@ -1,4 +1,5 @@
 dist/
+android/build/
 ios/Pods/
 *.md
 !CHANGELOG.md
