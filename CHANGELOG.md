@@ -26,23 +26,6 @@ All notable changes to this project will be documented in this file.
 - add android 13 support ([804f90e](https://github.com/jonz94/capacitor-sim/commit/804f90e5f5044c7a7c20b08d3391e04661102122))
 - upgrade to Capacitor 5 ([bb28f65](https://github.com/jonz94/capacitor-sim/commit/bb28f653419aac0d3435a5154456ca6941906020))
 
-## [2.0.0-beta.1](https://github.com/jonz94/capacitor-sim/compare/v2.0.0-beta.0...v2.0.0-beta.1) (2023-04-16)
-
-### Bug Fixes
-
-- **android:** resolve permission issue ([cfe5a8b](https://github.com/jonz94/capacitor-sim/commit/cfe5a8bd924801d8c108782c3822622660abd97d))
-
-## [2.0.0-beta.0](https://github.com/jonz94/capacitor-sim/compare/v1.0.4...v2.0.0-beta.0) (2023-04-16)
-
-### ⚠ BREAKING CHANGES
-
-- upgrade to Capacitor 5
-
-### Features
-
-- add android 13 support ([804f90e](https://github.com/jonz94/capacitor-sim/commit/804f90e5f5044c7a7c20b08d3391e04661102122))
-- upgrade to Capacitor 5 ([bb28f65](https://github.com/jonz94/capacitor-sim/commit/bb28f653419aac0d3435a5154456ca6941906020))
-
 ## [1.0.5](https://github.com/jonz94/capacitor-sim/compare/v1.0.4...v1.0.5) (2023-04-16)
 
 ### Bug Fixes
