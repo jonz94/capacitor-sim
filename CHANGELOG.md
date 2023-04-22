@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.0-beta.3](https://github.com/jonz94/capacitor-sim/compare/v2.0.0-beta.2...v2.0.0-beta.3) (2023-04-22)
+
+### Features
+
+- **android:** update gradle to 8.0.2 and gradle plugin to 8.0.0 ([5253c7e](https://github.com/jonz94/capacitor-sim/commit/5253c7e234bc1e7e240953a37af286a4718545e9))
+- **android:** use java 17 ([ad2a8f9](https://github.com/jonz94/capacitor-sim/commit/ad2a8f95923446dbe0bdef0efd433faa9102189f))
+
 ## [2.0.0-beta.2](https://github.com/jonz94/capacitor-sim/compare/v1.0.5...v2.0.0-beta.2) (2023-04-16)
 
 ### Bug Fixes
