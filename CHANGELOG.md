@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.0-beta.3](https://github.com/jonz94/capacitor-sim/compare/v2.0.0-beta.2...v2.0.0-beta.3) (2023-04-22)
+
+### Features
+
+- **android:** update gradle to 8.0.2 and gradle plugin to 8.0.0 ([5253c7e](https://github.com/jonz94/capacitor-sim/commit/5253c7e234bc1e7e240953a37af286a4718545e9))
+- **android:** use java 17 ([ad2a8f9](https://github.com/jonz94/capacitor-sim/commit/ad2a8f95923446dbe0bdef0efd433faa9102189f))
+
+## [2.0.0-beta.2](https://github.com/jonz94/capacitor-sim/compare/v1.0.5...v2.0.0-beta.2) (2023-04-16)
+
+### Bug Fixes
+
+- **android:** fix phone number is empty string on android 11 and above ([66a8844](https://github.com/jonz94/capacitor-sim/commit/66a884469f125d5295b8c7d80836e55ce063498a))
+- **android:** resolve permission issue for android 13 ([d8939ff](https://github.com/jonz94/capacitor-sim/commit/d8939ff5419d162d0e8885b4d9cd888bb70d55c7))
+
+## [2.0.0-beta.1](https://github.com/jonz94/capacitor-sim/compare/v2.0.0-beta.0...v2.0.0-beta.1) (2023-04-16)
+
+### Bug Fixes
+
+- **android:** resolve permission issue ([cfe5a8b](https://github.com/jonz94/capacitor-sim/commit/cfe5a8bd924801d8c108782c3822622660abd97d))
+
+## [2.0.0-beta.0](https://github.com/jonz94/capacitor-sim/compare/v1.0.4...v2.0.0-beta.0) (2023-04-16)
+
+### ⚠ BREAKING CHANGES
+
+- upgrade to Capacitor 5
+
+### Features
+
+- add android 13 support ([804f90e](https://github.com/jonz94/capacitor-sim/commit/804f90e5f5044c7a7c20b08d3391e04661102122))
+- upgrade to Capacitor 5 ([bb28f65](https://github.com/jonz94/capacitor-sim/commit/bb28f653419aac0d3435a5154456ca6941906020))
+
 ## [1.0.5](https://github.com/jonz94/capacitor-sim/compare/v1.0.4...v1.0.5) (2023-04-16)
 
 ### Bug Fixes

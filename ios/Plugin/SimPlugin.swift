@@ -21,7 +21,7 @@ public class SimPlugin: CAPPlugin {
             ])
         } else {
             call.resolve([
-                "simCards": []
+                "simCards": [] as NSArray
             ])
         }
     }
