@@ -77,6 +77,8 @@ class SimPlugin : Plugin() {
                     carrierInfo.put("mobileNetworkCode", subscriptionInfo.mnc.toString())
                 }
 
+                carrierInfo.put("integratedCircuitCardId", subscriptionInfo.iccId)
+
                 carrierInfoCollection.put(carrierInfo)
             }
         }
