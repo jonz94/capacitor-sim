@@ -2,9 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.0.0](https://github.com/jonz94/capacitor-sim/compare/v3.0.0-beta.0...v3.0.0) (2024-07-15)
-
-## [3.0.0-beta.0](https://github.com/jonz94/capacitor-sim/compare/v2.0.0...v3.0.0-beta.0) (2024-05-06)
+## [3.0.0](https://github.com/jonz94/capacitor-sim/compare/v2.0.0...v3.0.0) (2024-07-15)
 
 ### ⚠ BREAKING CHANGES
 
@@ -12,7 +10,7 @@ All notable changes to this project will be documented in this file.
 
 ### Features
 
-- upgrade to Capacitor 6 ([868095e](https://github.com/jonz94/capacitor-sim/commit/868095e3ac3e17841dcb6dd7a945ba0a2e87d24b))
+- upgrade to Capacitor 6 ([#11](https://github.com/jonz94/capacitor-sim/issues/11)), closes [#9](https://github.com/jonz94/capacitor-sim/issues/9)
 
 ## [2.0.0](https://github.com/jonz94/capacitor-sim/compare/v1.0.5...v2.0.0) (2023-05-07)
 
