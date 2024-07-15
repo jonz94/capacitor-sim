@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.0](https://github.com/jonz94/capacitor-sim/compare/v3.0.0-beta.0...v3.0.0) (2024-07-15)
+
 ## [3.0.0-beta.0](https://github.com/jonz94/capacitor-sim/compare/v2.0.0...v3.0.0-beta.0) (2024-05-06)
 
 ### ⚠ BREAKING CHANGES
