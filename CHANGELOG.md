@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [3.0.2](https://github.com/jonz94/capacitor-sim/compare/v3.0.1...v3.0.2) (2025-01-22)
 
+### Bug Fixes
+
+- update all development dependencies ([cc9c373](https://github.com/jonz94/capacitor-sim/commit/cc9c373ece4902a8edc447d36d1d1088b5bbc254))
+
 ## [3.0.1](https://github.com/jonz94/capacitor-sim/compare/v3.0.0...v3.0.1) (2024-11-13)
 
 ### Bug Fixes
